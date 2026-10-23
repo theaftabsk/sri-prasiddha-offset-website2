@@ -27,24 +27,21 @@ export default function ContactPage() {
       <Navbar />
 
       <main className="flex-1">
-        {/* Contact Hero Header - Modern CMYK Dark Style */}
-        <section className="relative pt-14 pb-16 bg-[#080b11] text-center overflow-hidden border-b border-white/10">
-          <div className="absolute top-10 left-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute top-10 right-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-[100px] pointer-events-none" />
+        {/* Contact Hero Header - Sleek Corporate Style */}
+        <section className="relative pt-14 pb-16 bg-[#0a0e17] text-center overflow-hidden border-b border-slate-800">
+          <div className="absolute top-0 right-1/4 w-80 h-80 bg-sky-600/5 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="inline-flex items-center gap-2 bg-slate-900/90 border border-white/10 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase mb-6 shadow-lg backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-              <span className="text-slate-300">DIRECT FACTORY DESK & VISITATION</span>
+            <div className="inline-flex items-center gap-2 bg-slate-900/90 border border-slate-700/80 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6 shadow-md backdrop-blur-md">
+              <span className="w-2 h-2 rounded-full bg-sky-400" />
+              <span className="text-slate-200">DIRECT FACTORY DESK & VISITATION</span>
               <span className="text-slate-600">•</span>
-              <span className="text-orange-400 font-extrabold">CHINTAL, HYDERABAD</span>
+              <span className="text-sky-400 font-bold">CHINTAL, HYDERABAD</span>
             </div>
 
             <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.12] uppercase mb-6">
               CONTACT &{" "}
-              <span className="bg-gradient-to-r from-cyan-400 via-pink-500 to-amber-400 bg-clip-text text-transparent">
-                QUOTATION DESK
-              </span>
+              <span className="text-sky-400">QUOTATION DESK</span>
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-8 font-normal">
@@ -58,7 +55,7 @@ export default function ContactPage() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-extrabold text-xs sm:text-sm px-7 py-3.5 rounded-full shadow-lg shadow-emerald-500/20 transition transform hover:-translate-y-0.5 tracking-wide"
+                className="inline-flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-7 py-3.5 rounded-full shadow-lg transition transform hover:-translate-y-0.5 tracking-wide"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
                 <span>Instant WhatsApp Inquiry (+91 {COMPANY_INFO.primaryPhone})</span>
@@ -66,9 +63,9 @@ export default function ContactPage() {
 
               <a
                 href={`tel:${COMPANY_INFO.primaryPhone}`}
-                className="inline-flex items-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-bold text-xs sm:text-sm px-7 py-3.5 rounded-full border border-white/10 hover:border-orange-500/50 shadow-md transition transform hover:-translate-y-0.5 tracking-wide uppercase"
+                className="inline-flex items-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-xs sm:text-sm px-7 py-3.5 rounded-full border border-slate-700/80 hover:border-slate-500 shadow-md transition transform hover:-translate-y-0.5 tracking-wide uppercase"
               >
-                <Phone className="w-4 h-4 text-orange-400" />
+                <Phone className="w-4 h-4 text-sky-400" />
                 <span>CALL: {COMPANY_INFO.primaryPhone}</span>
               </a>
             </div>

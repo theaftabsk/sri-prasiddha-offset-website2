@@ -38,10 +38,10 @@ export default function HomePage() {
           <div className="pb-16 text-center">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2.5 bg-gradient-to-r from-cyan-500 via-pink-600 to-amber-500 hover:opacity-90 text-white font-extrabold text-xs uppercase tracking-widest px-8 py-4 rounded-full shadow-lg shadow-pink-500/20 transition transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2.5 bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold text-xs uppercase tracking-widest px-8 py-4 rounded-full shadow-lg shadow-sky-500/20 transition transform hover:-translate-y-0.5"
             >
               <span>VIEW FULL SERVICE CATALOGUE (17 SERVICES)</span>
-              <ArrowUpRight className="w-4 h-4 text-white" />
+              <ArrowUpRight className="w-4 h-4 text-slate-950" />
             </Link>
           </div>
         </div>
@@ -52,10 +52,10 @@ export default function HomePage() {
           <div className="pb-16 text-center">
             <Link
               href="/clients"
-              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-orange-500/30 hover:border-orange-500 text-orange-400 hover:text-white font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-full shadow-md transition transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-full shadow-md transition transform hover:-translate-y-0.5"
             >
               <span>VIEW ALL 26 VERIFIED CORPORATE CLIENTS</span>
-              <ArrowUpRight className="w-4 h-4 text-orange-400" />
+              <ArrowUpRight className="w-4 h-4 text-sky-400" />
             </Link>
           </div>
         </div>

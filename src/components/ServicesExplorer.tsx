@@ -109,18 +109,18 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
             return (
               <div
                 key={service.id}
-                className="bg-slate-900/70 backdrop-blur-xl rounded-3xl p-7 border border-white/10 shadow-xl hover:shadow-2xl hover:border-orange-500/50 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                className="bg-slate-900/80 backdrop-blur-xl rounded-3xl p-7 border border-slate-800 shadow-xl hover:shadow-2xl hover:border-slate-700 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
               >
                 {/* Accent Top Border */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-pink-500 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-sky-400 opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 <div>
                   <div className="flex items-center justify-between gap-3 mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-slate-800 text-orange-400 flex items-center justify-center shadow-inner group-hover:bg-gradient-to-br group-hover:from-orange-500 group-hover:to-pink-600 group-hover:text-white transition-all duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-slate-800/90 text-sky-400 flex items-center justify-center shadow-inner group-hover:bg-sky-500 group-hover:text-slate-950 transition-all duration-300">
                       <Icon className="w-6 h-6" />
                     </div>
 
-                    <span className="text-[10px] font-extrabold uppercase tracking-widest text-cyan-300 bg-cyan-950/60 border border-cyan-500/30 px-3 py-1 rounded-full">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-300 bg-slate-800/80 border border-slate-700 px-3 py-1 rounded-full">
                       {service.categoryKey === "industrial"
                         ? "Industrial"
                         : service.categoryKey === "stationery"
@@ -131,7 +131,7 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
                     </span>
                   </div>
 
-                  <h3 className="font-extrabold text-xl text-white mb-2.5 leading-snug group-hover:text-orange-400 transition-colors">
+                  <h3 className="font-extrabold text-xl text-white mb-2.5 leading-snug group-hover:text-sky-400 transition-colors">
                     {service.name}
                   </h3>
 
@@ -144,9 +144,9 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
                     {service.specs.map((spec, sIdx) => (
                       <span
                         key={sIdx}
-                        className="inline-flex items-center gap-1 text-[11px] font-medium bg-slate-950/80 text-slate-300 border border-white/5 px-2.5 py-1 rounded-md"
+                        className="inline-flex items-center gap-1 text-[11px] font-medium bg-slate-950/80 text-slate-300 border border-slate-800 px-2.5 py-1 rounded-md"
                       >
-                        <Check className="w-3 h-3 text-emerald-400" />
+                        <Check className="w-3 h-3 text-sky-400" />
                         {spec}
                       </span>
                     ))}
@@ -154,10 +154,10 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
                 </div>
 
                 {/* Footer Actions */}
-                <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
+                <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-2">
                   <button
                     onClick={() => onSelectService(service.name)}
-                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-orange-400 hover:text-orange-300 transition"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-sky-400 hover:text-sky-300 transition"
                   >
                     <span>Request Quote</span>
                     <ArrowRight className="w-4 h-4" />
@@ -169,7 +169,7 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition bg-emerald-950/50 hover:bg-emerald-950/80 border border-emerald-500/30 px-3 py-1.5 rounded-full"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition bg-emerald-950/40 hover:bg-emerald-950/70 border border-emerald-500/30 px-3 py-1.5 rounded-full"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
                     <span>WhatsApp</span>
