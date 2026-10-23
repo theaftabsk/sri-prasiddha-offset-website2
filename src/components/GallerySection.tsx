@@ -51,18 +51,18 @@ export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
 
   return (
-    <section id="gallery" className="py-20 bg-white border-t border-slate-200">
+    <section id="gallery" className="py-20 bg-[#0b0f19] text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-bold text-orange-600 uppercase tracking-widest block mb-2">
-            Work Samples & Facility
+          <span className="text-xs font-bold text-orange-400 uppercase tracking-widest block mb-2">
+            Facility & Finished Work Showcase
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-            Our Work / Facility Showcase
+          <h2 className="font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4 uppercase">
+            Work Samples & Production Floor
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg">
-            Take a look at our live production capacity, industrial safety boards, corporate stationery suites, and finished samples.
+          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+            Inspect our high-speed offset machinery, industrial caution signage boards, carbonless invoice books, corporate stationery, and finished brand merchandise.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export default function GallerySection() {
             <div
               key={item.id}
               onClick={() => setSelectedImage(item)}
-              className="group relative rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-slate-200 transition-all duration-300 cursor-pointer bg-slate-950 aspect-16/10"
+              className="group relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer bg-slate-950 aspect-16/10"
             >
               <Image
                 src={item.image}
@@ -81,9 +81,9 @@ export default function GallerySection() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-orange-400 bg-orange-950/60 backdrop-blur-xs px-3 py-1 rounded-full border border-orange-500/30">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-300 bg-cyan-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-cyan-500/30">
                     {item.category}
                   </span>
                   <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -108,20 +108,20 @@ export default function GallerySection() {
       {selectedImage && (
         <div
           onClick={() => setSelectedImage(null)}
-          className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 animate-fadeIn"
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex items-center justify-center p-4 sm:p-8 animate-fade-in"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-200"
+            className="relative max-w-4xl w-full bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-white/20"
           >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-slate-900/70 hover:bg-slate-900 text-white flex items-center justify-center transition"
+              className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-slate-800/80 hover:bg-slate-700 text-white flex items-center justify-center transition"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="relative aspect-16/10 w-full bg-slate-900">
+            <div className="relative aspect-16/10 w-full bg-black">
               <Image
                 src={selectedImage.image}
                 alt={selectedImage.title}
@@ -131,13 +131,13 @@ export default function GallerySection() {
             </div>
 
             <div className="p-6 sm:p-8">
-              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 block mb-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-400 block mb-1">
                 {selectedImage.category}
               </span>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">
+              <h3 className="text-2xl font-bold text-white mb-2">
                 {selectedImage.title}
               </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-sm text-slate-300 leading-relaxed">
                 {selectedImage.description}
               </p>
             </div>

@@ -2,27 +2,38 @@
 
 @layer base {
   :root {
-    --color-orange: #f97316;
-    --color-orange-dark: #ea580c;
-    --color-maroon: #701a35;
-    --color-green: #15803d;
-    --color-cyan: #0284c7;
+    --bg-dark: #080b11;
+    --bg-surface: #0f1623;
+    --bg-card: #141d2e;
+    --bg-card-hover: #192439;
     
-    /* CMYK Accents */
-    --cmyk-cyan: #00a4e4;
-    --cmyk-magenta: #e5007d;
-    --cmyk-yellow: #fdb913;
-    --cmyk-black: #18181b;
+    /* CMYK Signature Spectrum */
+    --cmyk-cyan: #00d2ff;
+    --cmyk-cyan-glow: rgba(0, 210, 255, 0.35);
+    --cmyk-magenta: #ff007a;
+    --cmyk-magenta-glow: rgba(255, 0, 122, 0.35);
+    --cmyk-yellow: #ffdf00;
+    --cmyk-yellow-glow: rgba(255, 223, 0, 0.35);
+    --cmyk-key: #05070b;
+
+    /* Sri Prasiddha Brand Accents */
+    --brand-orange: #ff6b35;
+    --brand-maroon: #831843;
+    --brand-green: #10b981;
+    
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --border-glass-hover: rgba(255, 107, 53, 0.4);
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    background-color: #080b11;
   }
 
   body {
-    background-color: #ffffff;
-    color: #0f172a;
+    background-color: #080b11;
+    color: #f1f5f9;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     overflow-x: hidden;
   }
@@ -34,94 +45,87 @@
   100% { transform: translateX(-50%); }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes cmykGlow {
+  0% { filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.5)); }
+  33% { filter: drop-shadow(0 0 15px rgba(255, 0, 122, 0.5)); }
+  66% { filter: drop-shadow(0 0 15px rgba(255, 223, 0, 0.5)); }
+  100% { filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.5)); }
 }
 
 @keyframes floatSmooth {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-8px); }
   100% { transform: translateY(0px); }
 }
 
-@keyframes pulseSoft {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.08); opacity: 0.85; }
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.15); }
 }
 
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: scrollMarquee 35s linear infinite;
+  animation: scrollMarquee 38s linear infinite;
 }
 
 .animate-marquee:hover {
   animation-play-state: paused;
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.4s ease-out forwards;
-}
-
 .animate-float {
-  animation: floatSmooth 4s ease-in-out infinite;
+  animation: floatSmooth 4.5s ease-in-out infinite;
 }
 
-.animate-pulse-soft {
-  animation: pulseSoft 2.5s ease-in-out infinite;
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
 }
 
-/* White Glass Utilities */
-.glass-white {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
+.cmyk-glow-cycle {
+  animation: cmykGlow 6s infinite ease-in-out;
 }
 
-.glass-pill {
-  background: rgba(248, 250, 252, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+/* Dark Glassmorphism Cards */
+.glass-dark-card {
+  background: rgba(15, 22, 35, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Custom Scrollbars */
+.glass-dark-card:hover {
+  background: rgba(20, 29, 46, 0.85);
+  border-color: rgba(255, 107, 53, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -10px rgba(255, 107, 53, 0.15);
+}
+
+/* 4-Color CMYK Bar Graphic */
+.cmyk-spectrum-bar {
+  display: flex;
+  height: 4px;
+  width: 100%;
+}
+.cmyk-c { flex: 1; background: #00d2ff; }
+.cmyk-m { flex: 1; background: #ff007a; }
+.cmyk-y { flex: 1; background: #ffdf00; }
+.cmyk-k { flex: 1; background: #000000; }
+
+/* Custom Dark Scrollbars */
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #080b11;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #1e293b;
   border-radius: 9999px;
+  border: 2px solid #080b11;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-/* Mobile responsive helper classes */
-@media (max-width: 640px) {
-  .hero-heading {
-    font-size: 2.15rem !important;
-    line-height: 1.18 !important;
-  }
+  background: #ff6b35;
 }

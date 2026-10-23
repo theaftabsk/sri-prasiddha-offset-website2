@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Heart, Shield, ArrowUp, Database } from "lucide-react";
+import Link from "next/link";
+import { Phone, Mail, MapPin, Heart, Shield, ArrowUp, ArrowUpRight, Database } from "lucide-react";
 import { COMPANY_INFO } from "@/data/printingData";
 
 export default function Footer() {
@@ -24,9 +25,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-950 text-slate-400 border-t-4 border-orange-500 pt-16 pb-12">
+    <footer className="bg-[#05070b] text-slate-400 border-t border-white/10 pt-16 pb-12 relative overflow-hidden">
+      {/* 4-Color CMYK Bar on top */}
+      <div className="flex h-1.5 w-full absolute top-0 left-0 right-0">
+        <div className="flex-1 bg-[#00d2ff]" />
+        <div className="flex-1 bg-[#ff007a]" />
+        <div className="flex-1 bg-[#ffdf00]" />
+        <div className="flex-1 bg-[#ff6b35]" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           {/* Brand info */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3 mb-4">
@@ -39,8 +48,8 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <span className="font-extrabold text-xl text-orange-500 tracking-tight block">
-                  SRI PRASIDDHA OFFSET
+                <span className="font-extrabold text-xl text-white tracking-tight block">
+                  SRI PRASIDDHA <span className="text-orange-400">OFFSET</span>
                 </span>
                 <span className="text-[10px] font-bold tracking-wider text-slate-400 uppercase">
                   A Complete Printing Solutions
@@ -48,22 +57,22 @@ export default function Footer() {
               </div>
             </div>
 
-            <p className="text-sm text-slate-400 leading-relaxed mb-6">
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6">
               Hyderabad’s premier commercial and industrial offset printing facility. Serving 26+ corporate clients with registers, safety boards, stationery, and packaging materials.
             </p>
 
             <div className="space-y-2 text-xs text-slate-300">
               <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Primary: <strong className="text-white">+91 {COMPANY_INFO.primaryPhone}</strong></span>
+              </div>
+              <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-orange-400" />
-                <span>Primary: <strong>{COMPANY_INFO.primaryPhone}</strong></span>
+                <span>Second Choice: <strong className="text-white">+91 {COMPANY_INFO.altPhone}</strong></span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-slate-500" />
-                <span>Second Choice: <strong>{COMPANY_INFO.altPhone}</strong></span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-orange-400" />
-                <span>{COMPANY_INFO.email}</span>
+                <Mail className="w-3.5 h-3.5 text-pink-400" />
+                <span className="text-slate-300">{COMPANY_INFO.email}</span>
               </div>
             </div>
           </div>
@@ -73,41 +82,41 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-widest text-white mb-4">
               Printing Categories
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <a href="#services" className="hover:text-orange-400 transition">
+                <Link href="/services" className="hover:text-cyan-400 transition">
                   Industrial Registers & Log Books
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-orange-400 transition">
+                <Link href="/services" className="hover:text-cyan-400 transition">
                   Safety Precaution & Caution Boards
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-orange-400 transition">
+                <Link href="/services" className="hover:text-cyan-400 transition">
                   Bill Books & Duplicate NCR Invoices
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-orange-400 transition">
+                <Link href="/services" className="hover:text-cyan-400 transition">
                   Letterheads & Business Cards
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-orange-400 transition">
+                <Link href="/services" className="hover:text-cyan-400 transition">
                   Roll-Up Standees & Banners
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-orange-400 transition">
+                <Link href="/services" className="hover:text-cyan-400 transition">
                   Roll-Form Labels & Vinyl Stickers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-orange-400 transition">
-                  Branded T-Shirts & Apparel
-                </a>
+                <Link href="/services" className="hover:text-cyan-400 transition">
+                  Branded T-Shirts & Custom Apparel
+                </Link>
               </li>
             </ul>
           </div>
@@ -117,36 +126,36 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-widest text-white mb-4">
               Client Sectors
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <a href="#clients" className="hover:text-orange-400 transition">
+                <Link href="/clients" className="hover:text-pink-400 transition">
                   Pharma Formulations
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#clients" className="hover:text-orange-400 transition">
+                <Link href="/clients" className="hover:text-pink-400 transition">
                   Steel & Manufacturing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#clients" className="hover:text-orange-400 transition">
+                <Link href="/clients" className="hover:text-pink-400 transition">
                   Dairy & Food FMCG
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#clients" className="hover:text-orange-400 transition">
+                <Link href="/clients" className="hover:text-pink-400 transition">
                   Schools & Education
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#clients" className="hover:text-orange-400 transition">
+                <Link href="/clients" className="hover:text-pink-400 transition">
                   Civil Infrastructure
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#clients" className="hover:text-orange-400 transition">
+                <Link href="/clients" className="hover:text-pink-400 transition">
                   Hospitality & Healthcare
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -170,12 +179,12 @@ export default function Footer() {
               <span>Get Directions on Google Maps →</span>
             </a>
 
-            <div className="mt-6 pt-4 border-t border-slate-800">
+            <div className="mt-6 pt-4 border-t border-white/10">
               <button
                 onClick={handleOpenAdmin}
                 className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-300 transition"
               >
-                <Database className="w-3.5 h-3.5" />
+                <Database className="w-3.5 h-3.5 text-cyan-400" />
                 <span>View Stored Quotation Enquiries</span>
               </button>
             </div>
@@ -185,18 +194,18 @@ export default function Footer() {
         {/* Bottom Credits */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            © 2026 <strong>Sri Prasiddha Offset</strong>. All rights reserved.
+            © 2026 <strong className="text-white">Sri Prasiddha Offset</strong>. All rights reserved.
           </div>
 
           <div className="flex items-center gap-4">
-            <span>Proprietor: <strong>Hari Kumar K</strong></span>
+            <span>Proprietor: <strong className="text-slate-300">Hari Kumar K</strong></span>
             <span>•</span>
             <button
               onClick={scrollToTop}
               className="hover:text-orange-400 inline-flex items-center gap-1 transition"
             >
               <span>Back to Top</span>
-              <ArrowUp className="w-3.5 h-3.5" />
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
           </div>
         </div>
@@ -204,15 +213,15 @@ export default function Footer() {
 
       {/* Admin Enquiries Modal */}
       {showAdminModal && (
-        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="bg-slate-900 border border-slate-700 rounded-3xl max-w-2xl w-full p-6 text-white max-h-[80vh] overflow-y-auto">
-            <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
-              <h3 className="text-lg font-bold">
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="bg-slate-900 border border-white/20 rounded-3xl max-w-2xl w-full p-6 text-white max-h-[80vh] overflow-y-auto">
+            <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+              <h3 className="text-base font-bold text-white">
                 Stored Website Enquiries ({storedEnquiries.length})
               </h3>
               <button
                 onClick={() => setShowAdminModal(false)}
-                className="text-slate-400 hover:text-white text-sm"
+                className="text-slate-400 hover:text-white text-xs px-2 py-1 rounded bg-slate-800"
               >
                 Close
               </button>
@@ -227,11 +236,11 @@ export default function Footer() {
                 {storedEnquiries.map((item, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl bg-slate-800 border border-slate-700 text-xs space-y-1"
+                    className="p-4 rounded-xl bg-slate-950 border border-white/10 text-xs space-y-1"
                   >
                     <div className="flex justify-between items-center text-orange-400 font-bold">
-                      <span>Ref: {item.refId || "WhatsApp Enquiry"}</span>
-                      <span className="text-slate-400 font-normal">
+                      <span>Ref: {item.refId || "Direct Desk"}</span>
+                      <span className="text-slate-500 font-normal">
                         {item.date ? new Date(item.date).toLocaleDateString() : ""}
                       </span>
                     </div>
@@ -242,13 +251,8 @@ export default function Footer() {
                       <strong>Company:</strong> {item.company || "N/A"}
                     </div>
                     <div>
-                      <strong>Service:</strong> {item.service} | Qty: {item.quantity}
+                      <strong>Service:</strong> {item.service}
                     </div>
-                    {item.notes && (
-                      <div className="text-slate-400">
-                        <strong>Notes:</strong> {item.notes}
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>

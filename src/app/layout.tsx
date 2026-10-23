@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import "./globals.css";
-import { COMPANY_INFO } from "@/data/printingData";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -9,16 +8,16 @@ const plusJakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-serif",
+const outfit = Outfit({
+  variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["600", "700", "800", "900"],
+  weight: ["500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sriprasiddhaoffset.com"),
   title: {
-    default: "Sri Prasiddha Offset | Complete Printing Solutions · Hyderabad",
+    default: "Sri Prasiddha Offset | Complete Commercial Printing Solutions · Hyderabad",
     template: "%s | Sri Prasiddha Offset",
   },
   description:
@@ -37,20 +36,11 @@ export const metadata: Metadata = {
     "Hari Kumar K Hyderabad",
     "Printing Press Near Vegetable Market Chintal",
     "Pharma Packaging Labels Hyderabad",
-    "Wedding Cards Printing Hyderabad",
     "Best Offset Printers Hyderabad 500054",
   ],
   authors: [{ name: "Sri Prasiddha Offset", url: "https://sriprasiddhaoffset.com" }],
   creator: "Hari Kumar K",
   publisher: "Sri Prasiddha Offset",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  alternates: {
-    canonical: "https://sriprasiddhaoffset.com",
-  },
   icons: {
     icon: [
       { url: "/assets/images/logo.png" },
@@ -62,7 +52,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Sri Prasiddha Offset | A Complete Printing Solutions · Hyderabad",
+    title: "Sri Prasiddha Offset | Complete Printing Solutions · Hyderabad",
     description:
       "Your Trusted Commercial Printing Partner in Hyderabad. Industrial Registers, Safety Boards, Bill Books, Stickers & Custom Branding. Trusted by 26+ Leading Corporations.",
     url: "https://sriprasiddhaoffset.com",
@@ -73,12 +63,6 @@ export const metadata: Metadata = {
         width: 1200,
         height: 675,
         alt: "Sri Prasiddha Offset - Visiting Card & Hyderabad Office Details",
-      },
-      {
-        url: "/assets/images/hero_press.jpg",
-        width: 1280,
-        height: 720,
-        alt: "Multi-color commercial offset press machine at Sri Prasiddha Offset",
       },
     ],
     locale: "en_IN",
@@ -91,21 +75,10 @@ export const metadata: Metadata = {
       "Commercial & Industrial Printing in Hyderabad. Industrial registers, safety boards, corporate stationery, stickers, brochures & standees.",
     images: ["/assets/images/visiting_card.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0284c7",
+  themeColor: "#ff6b35",
   width: "device-width",
   initialScale: 1,
 };
@@ -148,47 +121,6 @@ const JSON_LD = {
     name: "Hari Kumar K",
     jobTitle: "Proprietor & Technical Director",
   },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Commercial & Industrial Printing Services",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Industrial Related All Types Registers",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Safety Precaution Boards & Signage",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Corporate Bill Books & Duplicate Invoices",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Rollup Standees & Banners",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Product Stickers & Roll-Form Labels",
-        },
-      },
-    ],
-  },
 };
 
 export default function RootLayout({
@@ -197,7 +129,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${plusJakarta.variable} ${outfit.variable} dark`}>
       <head>
         <link rel="icon" href="/icon.png" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
@@ -207,7 +139,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
         />
       </head>
-      <body className="font-sans antialiased text-slate-900 bg-white min-h-screen flex flex-col selection:bg-cyan-500 selection:text-white">
+      <body className="font-sans antialiased text-slate-100 bg-[#080b11] min-h-screen flex flex-col selection:bg-pink-600 selection:text-white">
         {children}
       </body>
     </html>

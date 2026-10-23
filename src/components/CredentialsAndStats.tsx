@@ -8,25 +8,29 @@ const STATS = [
     number: "26+",
     title: "HAPPY RUNNING CLIENTS",
     sub: "Chemo, Hatsun, Emnar, Jairaj, Dr. Agarwal & more",
-    topColor: "bg-red-500",
+    topColor: "bg-[#00d2ff]",
+    textColor: "text-[#00d2ff]",
   },
   {
     number: "15+",
     title: "YEARS TECHNICAL PRINT EXPERIENCE",
     sub: "Complete commercial offset & digital engineering",
-    topColor: "bg-cyan-500",
+    topColor: "bg-[#ff007a]",
+    textColor: "text-[#ff007a]",
   },
   {
     number: "100%",
     title: "IN-HOUSE PRODUCTION STANDARD",
     sub: "High-speed multi-color offset & automated binding",
-    topColor: "bg-emerald-500",
+    topColor: "bg-[#ffdf00]",
+    textColor: "text-[#ffdf00]",
   },
   {
     number: "500+",
     title: "COMPLETED CORPORATE ORDERS",
     sub: "Industrial registers, safety boards & stationery",
-    topColor: "bg-[#701a35]",
+    topColor: "bg-[#ff6b35]",
+    textColor: "text-[#ff6b35]",
   },
 ];
 
@@ -45,12 +49,13 @@ export default function CredentialsAndStats() {
   const repeatedTicker = [...TICKER_ITEMS, ...TICKER_ITEMS];
 
   return (
-    <section className="bg-slate-50 border-y border-slate-200">
-      {/* 1. Black Credentials Marquee Bar (Exact match to Sri Ujjwala Met Lab Screenshot 3) */}
-      <div className="bg-black text-white flex items-center overflow-hidden border-b border-slate-800">
-        <div className="bg-black px-4 sm:px-6 py-3 font-serif font-black text-xs sm:text-sm uppercase tracking-wider text-white whitespace-nowrap flex items-center gap-2 border-r border-slate-800 z-10 shadow-lg">
-          <span>SRI PRASIDDHA&apos;S CREDENTIALS</span>
-          <ArrowRight className="w-3.5 h-3.5 text-cyan-400" />
+    <section className="bg-[#080b11] border-y border-white/10">
+      {/* 1. CMYK Neon Credentials Marquee Bar */}
+      <div className="bg-[#05070b] text-white flex items-center overflow-hidden border-b border-white/5">
+        <div className="bg-slate-900 px-4 sm:px-6 py-3 font-extrabold text-xs sm:text-sm uppercase tracking-wider text-white whitespace-nowrap flex items-center gap-2 border-r border-white/10 z-10 shadow-lg">
+          <span className="text-cyan-400">SRI PRASIDDHA&apos;S</span>
+          <span>CREDENTIALS</span>
+          <ArrowRight className="w-3.5 h-3.5 text-orange-400" />
         </div>
 
         <div className="animate-marquee flex items-center py-2.5">
@@ -66,27 +71,27 @@ export default function CredentialsAndStats() {
         </div>
       </div>
 
-      {/* 2. 4 Statistic Cards (Clean white glass cards with colorful top lines) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* 2. 4 Statistic Cards (Dark Glassmorphism with Neon CMYK Highlights) */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {STATS.map((stat, idx) => (
             <div
               key={idx}
-              className="relative bg-white rounded-2xl p-7 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden"
+              className="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl p-7 border border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden group hover:border-white/20"
             >
-              {/* Top Accent Strip */}
-              <div className={`absolute top-0 left-0 right-0 h-1.5 ${stat.topColor}`} />
+              {/* Top Neon Accent Strip */}
+              <div className={`absolute top-0 left-0 right-0 h-1 ${stat.topColor} opacity-80 group-hover:opacity-100 transition-opacity`} />
 
               <div>
-                <span className="font-serif font-black text-4xl sm:text-5xl text-slate-900 tracking-tight block mb-2">
+                <span className={`font-extrabold text-4xl sm:text-5xl tracking-tight block mb-2 ${stat.textColor}`}>
                   {stat.number}
                 </span>
 
-                <h3 className="font-sans font-extrabold text-xs tracking-wider text-slate-900 uppercase mb-2 leading-snug">
+                <h3 className="font-extrabold text-xs tracking-wider text-white uppercase mb-2 leading-snug">
                   {stat.title}
                 </h3>
 
-                <p className="text-xs text-slate-500 leading-relaxed font-medium">
+                <p className="text-xs text-slate-400 leading-relaxed font-normal">
                   {stat.sub}
                 </p>
               </div>
