@@ -104,66 +104,66 @@ _Generated via Sri Prasiddha Offset Website_`;
   };
 
   return (
-    <section id="quote-calculator" className="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <section id="quote-calculator" className="py-20 bg-slate-50 text-slate-900 border-t border-slate-200 relative overflow-hidden">
       {/* Background glow effects */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-orange-600/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#701a35]/25 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-600/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Benefits & Trust */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="inline-flex items-center gap-2 bg-orange-500/15 text-orange-400 border border-orange-500/30 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 w-fit">
+            <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 border border-red-200 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 w-fit">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Instant Quotation Engine</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
               Get an Instant Wholesale Printing Quotation
             </h2>
 
-            <p className="text-slate-300 text-base leading-relaxed mb-8">
+            <p className="text-slate-600 text-base leading-relaxed mb-8">
               Whether you need 100 corporate bill books, factory safety boards, or 50,000 product labels — get transparent, factory-direct pricing backed by 15+ years of Hyderabad printing excellence.
             </p>
 
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
-                <span className="text-sm text-slate-200">
+                <span className="text-sm text-slate-700">
                   <strong>Direct Factory Rates:</strong> No middlemen or broker markup.
                 </span>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0">
                   <FileCheck className="w-5 h-5" />
                 </div>
-                <span className="text-sm text-slate-200">
+                <span className="text-sm text-slate-700">
                   <strong>Free Pre-Press Proofing:</strong> Artwork verification before printing.
                 </span>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
-                <span className="text-sm text-slate-200">
+                <span className="text-sm text-slate-700">
                   <strong>Doorstep Dispatch:</strong> Fast delivery to all Hyderabad zones.
                 </span>
               </div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center flex-shrink-0">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center flex-shrink-0">
                 <Phone className="w-6 h-6" />
               </div>
               <div>
-                <span className="text-xs text-slate-400 font-semibold block">Need to talk right now?</span>
+                <span className="text-xs text-slate-500 font-semibold block">Need to talk right now?</span>
                 <a
                   href={`tel:${COMPANY_INFO.primaryPhone}`}
-                  className="text-lg font-bold text-white hover:text-orange-400 transition"
+                  className="text-lg font-bold text-slate-900 hover:text-red-600 transition"
                 >
                   {COMPANY_INFO.primaryPhone} (Hari Kumar K)
                 </a>
@@ -173,11 +173,11 @@ _Generated via Sri Prasiddha Offset Website_`;
 
           {/* Right Column: Interactive Form Card */}
           <div className="lg:col-span-7">
-            <div className="bg-slate-800/80 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl">
-              <h3 className="text-xl font-bold text-white mb-6 flex items-center justify-between">
+            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xl">
+              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center justify-between">
                 <span>Select Your Printing Specifications</span>
                 {service && (
-                  <span className="text-xs font-semibold text-orange-400 bg-orange-400/10 px-2.5 py-1 rounded-md">
+                  <span className="text-xs font-semibold text-red-600 bg-red-50 px-2.5 py-1 rounded-md border border-red-200">
                     Selected: {service}
                   </span>
                 )}
@@ -186,13 +186,13 @@ _Generated via Sri Prasiddha Offset Website_`;
               <form className="space-y-5">
                 {/* Service Selection */}
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">
+                  <label className="block text-xs font-semibold text-slate-700 mb-1.5 uppercase tracking-wider">
                     Select Printing Service *
                   </label>
                   <select
                     value={service}
                     onChange={(e) => setService(e.target.value)}
-                    className="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600"
                   >
                     <option value="">-- Choose from our 17 printing services --</option>
                     {SERVICES_DATA.map((s) => (
@@ -205,8 +205,8 @@ _Generated via Sri Prasiddha Offset Website_`;
 
                 {/* Quantity Picker */}
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-2 uppercase tracking-wider">
-                    Estimated Quantity: <span className="text-orange-400 font-bold">{quantity}</span>
+                  <label className="block text-xs font-semibold text-slate-700 mb-2 uppercase tracking-wider">
+                    Estimated Quantity: <span className="text-red-600 font-bold">{quantity}</span>
                   </label>
                   <div className="flex flex-wrap gap-2">
                     {QUANTITY_OPTIONS.map((qty) => (
@@ -216,8 +216,8 @@ _Generated via Sri Prasiddha Offset Website_`;
                         onClick={() => setQuantity(qty)}
                         className={`text-xs font-bold px-3 py-1.5 rounded-lg border transition ${
                           quantity === qty
-                            ? "bg-orange-500 text-white border-orange-500 shadow-sm"
-                            : "bg-slate-900/60 text-slate-300 border-slate-700 hover:border-slate-500"
+                            ? "bg-red-600 text-white border-red-600 shadow-sm"
+                            : "bg-slate-50 text-slate-700 border-slate-200 hover:border-red-400"
                         }`}
                       >
                         {qty}
@@ -228,13 +228,13 @@ _Generated via Sri Prasiddha Offset Website_`;
 
                 {/* Material / Paper Grade */}
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1.5 uppercase tracking-wider">
+                  <label className="block text-xs font-semibold text-slate-700 mb-1.5 uppercase tracking-wider">
                     Paper / Substrate / Board Grade
                   </label>
                   <select
                     value={material}
                     onChange={(e) => setMaterial(e.target.value)}
-                    className="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500"
+                    className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-red-600"
                   >
                     <option value="Executive Grade / Premium Art Board">
                       Executive Grade / 350 GSM Art Board
@@ -266,7 +266,7 @@ _Generated via Sri Prasiddha Offset Website_`;
                 {/* Client Contact Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Your Full Name
                     </label>
                     <input
@@ -274,11 +274,11 @@ _Generated via Sri Prasiddha Offset Website_`;
                       placeholder="e.g. Ramesh Kumar"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500"
+                      className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-red-600"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Company / Organization Name
                     </label>
                     <input
@@ -286,7 +286,7 @@ _Generated via Sri Prasiddha Offset Website_`;
                       placeholder="e.g. Hyderabad Pharma Ltd."
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}
-                      className="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500"
+                      className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-red-600"
                     />
                   </div>
                 </div>
@@ -294,7 +294,7 @@ _Generated via Sri Prasiddha Offset Website_`;
                 {/* Phone & Custom Notes */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Phone Number *
                     </label>
                     <input
@@ -303,11 +303,11 @@ _Generated via Sri Prasiddha Offset Website_`;
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       required
-                      className="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500"
+                      className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-red-600"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Custom Size / Special Requirements
                     </label>
                     <input
@@ -315,7 +315,7 @@ _Generated via Sri Prasiddha Offset Website_`;
                       placeholder="e.g. A4 size, duplicate numbering, matte finish"
                       value={notes}
                       onChange={(e) => setNotes(e.target.value)}
-                      className="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500"
+                      className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:outline-none focus:border-red-600"
                     />
                   </div>
                 </div>
@@ -325,7 +325,7 @@ _Generated via Sri Prasiddha Offset Website_`;
                   <button
                     type="button"
                     onClick={handleWhatsAppQuote}
-                    className="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-500/25 transition transform hover:-translate-y-0.5"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md transition transform hover:-translate-y-0.5"
                   >
                     <MessageCircle className="w-5 h-5" />
                     <span>Send on WhatsApp</span>
@@ -334,7 +334,7 @@ _Generated via Sri Prasiddha Offset Website_`;
                   <button
                     type="button"
                     onClick={handleSubmitOnline}
-                    className="w-full inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-orange-500/30 transition transform hover:-translate-y-0.5"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md transition transform hover:-translate-y-0.5"
                   >
                     <Send className="w-5 h-5" />
                     <span>Submit Online Quote</span>

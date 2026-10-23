@@ -16,17 +16,17 @@ export default function VisitingCardSpotlight() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#080b11] text-white border-t border-white/10">
+    <section id="contact" className="py-20 bg-white text-slate-900 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-bold text-orange-400 uppercase tracking-widest block mb-2">
+          <span className="text-xs font-bold text-red-600 uppercase tracking-widest block mb-2">
             Official Contact & Direct Numbers
           </span>
-          <h2 className="font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4 uppercase">
+          <h2 className="font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-4 uppercase">
             Connect Directly with Sri Prasiddha Offset
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             Reach out directly to proprietor Hari Kumar K for bulk industrial rate estimates, urgent same-day jobs, or factory visit appointments.
           </p>
         </div>
@@ -34,8 +34,8 @@ export default function VisitingCardSpotlight() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left: 3D Visiting Card Preview Frame */}
           <div className="lg:col-span-6">
-            <div className="bg-slate-900/80 backdrop-blur-xl rounded-3xl p-5 sm:p-7 shadow-2xl border border-white/10 hover:border-orange-500/40 transition-all duration-300">
-              <div className="relative aspect-16/9 w-full rounded-2xl overflow-hidden border border-white/10 shadow-lg bg-black group">
+            <div className="bg-slate-50 rounded-3xl p-5 sm:p-7 shadow-xl border border-slate-200 hover:border-red-500/40 transition-all duration-300">
+              <div className="relative aspect-16/9 w-full rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white group">
                 <Image
                   src="/assets/images/visiting_card.png"
                   alt="Official Visiting Card of Sri Prasiddha Offset - Hari Kumar K"
@@ -44,9 +44,9 @@ export default function VisitingCardSpotlight() {
                 />
               </div>
 
-              <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
-                <span className="font-bold text-slate-300 flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-orange-400" /> Official Business Card
+              <div className="mt-4 pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
+                <span className="font-bold text-slate-700 flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-red-600" /> Official Business Card
                 </span>
                 <span className="text-slate-500">Chintal, Hyderabad</span>
               </div>
@@ -56,18 +56,18 @@ export default function VisitingCardSpotlight() {
           {/* Right: Direct Contact Actions */}
           <div className="lg:col-span-6 space-y-4">
             {/* Primary Phone */}
-            <div className="bg-slate-900/70 backdrop-blur-xl rounded-2xl p-5 border border-white/10 shadow-lg flex items-center justify-between gap-4 hover:border-cyan-400/50 transition">
+            <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4 hover:border-red-500/40 hover:bg-white transition">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
+                <div className="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center flex-shrink-0 border border-red-100">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">
                     Primary Office Number (Hari Kumar K)
                   </span>
                   <a
                     href={`tel:${COMPANY_INFO.primaryPhone}`}
-                    className="text-lg sm:text-xl font-extrabold text-white hover:text-cyan-400 transition"
+                    className="text-lg sm:text-xl font-extrabold text-slate-900 hover:text-red-600 transition"
                   >
                     +91 {COMPANY_INFO.primaryPhone}
                   </a>
@@ -76,12 +76,12 @@ export default function VisitingCardSpotlight() {
 
               <button
                 onClick={() => copyToClipboard(COMPANY_INFO.primaryPhone, "phone1")}
-                className="inline-flex items-center gap-1 text-xs font-bold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 px-3.5 py-2 rounded-lg border border-white/5 transition"
+                className="inline-flex items-center gap-1 text-xs font-bold text-slate-700 hover:text-red-600 bg-white hover:bg-red-50 px-3.5 py-2 rounded-lg border border-slate-200 transition"
               >
                 {copiedKey === "phone1" ? (
                   <>
-                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    <span className="text-emerald-400">Copied!</span>
+                    <Check className="w-3.5 h-3.5 text-emerald-600" />
+                    <span className="text-emerald-600">Copied!</span>
                   </>
                 ) : (
                   <>
@@ -93,18 +93,18 @@ export default function VisitingCardSpotlight() {
             </div>
 
             {/* Alternate Phone */}
-            <div className="bg-slate-900/70 backdrop-blur-xl rounded-2xl p-5 border border-white/10 shadow-lg flex items-center justify-between gap-4 hover:border-orange-500/50 transition">
+            <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4 hover:border-red-500/40 hover:bg-white transition">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-orange-500/15 text-orange-400 flex items-center justify-center flex-shrink-0 border border-orange-500/20">
+                <div className="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center flex-shrink-0 border border-red-100">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">
                     Second Choice / Alternate Number
                   </span>
                   <a
                     href={`tel:${COMPANY_INFO.altPhone}`}
-                    className="text-lg sm:text-xl font-extrabold text-white hover:text-orange-400 transition"
+                    className="text-lg sm:text-xl font-extrabold text-slate-900 hover:text-red-600 transition"
                   >
                     +91 {COMPANY_INFO.altPhone}
                   </a>
@@ -113,12 +113,12 @@ export default function VisitingCardSpotlight() {
 
               <button
                 onClick={() => copyToClipboard(COMPANY_INFO.altPhone, "phone2")}
-                className="inline-flex items-center gap-1 text-xs font-bold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 px-3.5 py-2 rounded-lg border border-white/5 transition"
+                className="inline-flex items-center gap-1 text-xs font-bold text-slate-700 hover:text-red-600 bg-white hover:bg-red-50 px-3.5 py-2 rounded-lg border border-slate-200 transition"
               >
                 {copiedKey === "phone2" ? (
                   <>
-                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    <span className="text-emerald-400">Copied!</span>
+                    <Check className="w-3.5 h-3.5 text-emerald-600" />
+                    <span className="text-emerald-600">Copied!</span>
                   </>
                 ) : (
                   <>
@@ -130,18 +130,18 @@ export default function VisitingCardSpotlight() {
             </div>
 
             {/* Email */}
-            <div className="bg-slate-900/70 backdrop-blur-xl rounded-2xl p-5 border border-white/10 shadow-lg flex items-center justify-between gap-4 hover:border-pink-500/50 transition">
+            <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center justify-between gap-4 hover:border-red-500/40 hover:bg-white transition">
               <div className="flex items-center gap-4 min-w-0">
-                <div className="w-12 h-12 rounded-xl bg-pink-500/15 text-pink-400 flex items-center justify-center flex-shrink-0 border border-pink-500/20">
+                <div className="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center flex-shrink-0 border border-red-100">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div className="min-w-0">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">
                     Official Quotation Email
                   </span>
                   <a
                     href={`mailto:${COMPANY_INFO.email}`}
-                    className="text-sm sm:text-base font-bold text-white hover:text-pink-400 transition truncate block"
+                    className="text-sm sm:text-base font-bold text-slate-900 hover:text-red-600 transition truncate block"
                   >
                     {COMPANY_INFO.email}
                   </a>
@@ -150,12 +150,12 @@ export default function VisitingCardSpotlight() {
 
               <button
                 onClick={() => copyToClipboard(COMPANY_INFO.email, "email")}
-                className="inline-flex items-center gap-1 text-xs font-bold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 px-3.5 py-2 rounded-lg border border-white/5 transition flex-shrink-0"
+                className="inline-flex items-center gap-1 text-xs font-bold text-slate-700 hover:text-red-600 bg-white hover:bg-red-50 px-3.5 py-2 rounded-lg border border-slate-200 transition flex-shrink-0"
               >
                 {copiedKey === "email" ? (
                   <>
-                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    <span className="text-emerald-400">Copied!</span>
+                    <Check className="w-3.5 h-3.5 text-emerald-600" />
+                    <span className="text-emerald-600">Copied!</span>
                   </>
                 ) : (
                   <>
@@ -167,19 +167,19 @@ export default function VisitingCardSpotlight() {
             </div>
 
             {/* Address */}
-            <div className="bg-slate-900/70 backdrop-blur-xl rounded-2xl p-5 border border-white/10 shadow-lg flex items-start justify-between gap-4 hover:border-emerald-500/50 transition">
+            <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 shadow-sm flex items-start justify-between gap-4 hover:border-red-500/40 hover:bg-white transition">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-500/20 mt-0.5">
+                <div className="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center flex-shrink-0 border border-red-100 mt-0.5">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-0.5">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-0.5">
                     Factory & Office Address
                   </span>
-                  <p className="text-xs sm:text-sm font-semibold text-slate-200 leading-relaxed">
+                  <p className="text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed">
                     {COMPANY_INFO.address}
                   </p>
-                  <span className="text-xs text-slate-400 mt-1 block">
+                  <span className="text-xs text-slate-500 mt-1 block">
                     Landmark: Near Vegetable Market, Kakatiya Nagar, Chintal
                   </span>
                 </div>
@@ -189,7 +189,7 @@ export default function VisitingCardSpotlight() {
                 href={COMPANY_INFO.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs font-bold text-emerald-400 bg-emerald-950/60 hover:bg-emerald-900/60 border border-emerald-500/30 px-3 py-2 rounded-lg transition flex-shrink-0"
+                className="inline-flex items-center gap-1 text-xs font-bold text-red-600 bg-red-50 hover:bg-red-100 border border-red-200 px-3 py-2 rounded-lg transition flex-shrink-0"
               >
                 <span>Maps</span>
                 <ExternalLink className="w-3.5 h-3.5" />
@@ -202,7 +202,7 @@ export default function VisitingCardSpotlight() {
                 href={`https://wa.me/91${COMPANY_INFO.primaryPhone}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-extrabold text-xs sm:text-sm py-3.5 px-6 rounded-xl shadow-lg shadow-emerald-500/25 transition"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-extrabold text-xs sm:text-sm py-3.5 px-6 rounded-xl shadow-md transition"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
                 <span>Chat on WhatsApp</span>
@@ -212,9 +212,9 @@ export default function VisitingCardSpotlight() {
                 href={COMPANY_INFO.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-extrabold text-xs sm:text-sm py-3.5 px-6 rounded-xl border border-white/10 shadow-md transition"
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-900 font-extrabold text-xs sm:text-sm py-3.5 px-6 rounded-xl border border-slate-300 shadow-sm hover:border-red-500 transition"
               >
-                <MapPin className="w-4 h-4 text-orange-400" />
+                <MapPin className="w-4 h-4 text-red-600" />
                 <span>Open Google Maps</span>
               </a>
             </div>

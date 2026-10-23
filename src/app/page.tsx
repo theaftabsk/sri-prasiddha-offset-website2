@@ -20,42 +20,42 @@ export default function HomePage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#080b11] text-white">
+    <div className="flex flex-col min-h-screen bg-white text-slate-900">
       {/* 1. Header Navigation Bar */}
       <Navbar />
 
       {/* 2. Main Content */}
       <main className="flex-1">
-        {/* CMYK Dark Hero (4-Color Glow, Quick Direct Quote Desk) */}
+        {/* White & Crimson Red Hero */}
         <CmykDarkHero />
 
         {/* Credentials Ticker & 4 Stat Counter Cards */}
         <CredentialsAndStats />
 
         {/* Services Showcase Preview */}
-        <div className="bg-[#080b11] py-4">
+        <div className="bg-white py-4">
           <ServicesExplorer onSelectService={handleSelectService} />
           <div className="pb-16 text-center">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2.5 bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold text-xs uppercase tracking-widest px-8 py-4 rounded-full shadow-lg shadow-sky-500/20 transition transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2.5 bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs uppercase tracking-widest px-8 py-4 rounded-full shadow-lg shadow-red-600/20 transition transform hover:-translate-y-0.5"
             >
               <span>VIEW FULL SERVICE CATALOGUE (17 SERVICES)</span>
-              <ArrowUpRight className="w-4 h-4 text-slate-950" />
+              <ArrowUpRight className="w-4 h-4 text-white" />
             </Link>
           </div>
         </div>
 
         {/* 26 Valued Clients Section */}
-        <div className="bg-[#080b11]">
+        <div className="bg-slate-50 py-4 border-t border-slate-200">
           <ClientsSection />
           <div className="pb-16 text-center">
             <Link
               href="/clients"
-              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-full shadow-md transition transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 border border-slate-300 hover:border-red-400 text-slate-800 hover:text-red-600 font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-full shadow-sm transition transform hover:-translate-y-0.5"
             >
               <span>VIEW ALL 26 VERIFIED CORPORATE CLIENTS</span>
-              <ArrowUpRight className="w-4 h-4 text-sky-400" />
+              <ArrowUpRight className="w-4 h-4 text-red-600" />
             </Link>
           </div>
         </div>

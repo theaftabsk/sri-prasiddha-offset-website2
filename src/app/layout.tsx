@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ff6b35",
+  themeColor: "#dc2626",
   width: "device-width",
   initialScale: 1,
 };
@@ -129,7 +129,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${outfit.variable} dark`}>
+    <html lang="en" className={`${plusJakarta.variable} ${outfit.variable}`}>
       <head>
         <link rel="icon" href="/icon.png" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
@@ -139,7 +139,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
         />
       </head>
-      <body className="font-sans antialiased text-slate-100 bg-[#080b11] min-h-screen flex flex-col selection:bg-pink-600 selection:text-white">
+      <body className="font-sans antialiased text-slate-900 bg-white min-h-screen flex flex-col selection:bg-red-600 selection:text-white">
         {children}
       </body>
     </html>

@@ -31,7 +31,7 @@ export default function StickyActions() {
         {/* Call Button */}
         <a
           href={`tel:${COMPANY_INFO.primaryPhone}`}
-          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white flex items-center justify-center shadow-md shadow-sky-500/30 transition-all duration-200 transform hover:scale-105 active:scale-95"
+          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center shadow-md shadow-red-500/30 transition-all duration-200 transform hover:scale-105 active:scale-95"
           title={`Call ${COMPANY_INFO.primaryPhone}`}
           aria-label={`Call office directly at ${COMPANY_INFO.primaryPhone}`}
         >

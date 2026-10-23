@@ -66,20 +66,17 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
       : SERVICES_DATA.filter((s) => s.categoryKey === selectedCategory);
 
   return (
-    <section id="services" className="py-20 bg-[#0b0f19] text-white relative">
-      {/* Background glow orb */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none" />
-
+    <section id="services" className="py-20 bg-white text-slate-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold text-orange-400 uppercase tracking-widest block mb-2">
+          <span className="text-xs font-bold text-red-600 uppercase tracking-widest block mb-2 bg-red-50 border border-red-200/80 px-3.5 py-1 rounded-full w-fit mx-auto">
             Complete Print Solutions Catalogue
           </span>
-          <h2 className="font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4 uppercase">
+          <h2 className="font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-4 uppercase">
             Industrial, Commercial & Custom Printing Services
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             High-precision offset and digital print engineering with premium finishing, die-cutting, embossing, and automated binding.
           </p>
         </div>
@@ -90,10 +87,10 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
             <button
               key={cat.key}
               onClick={() => setSelectedCategory(cat.key)}
-              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 ${
+              className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 ${
                 selectedCategory === cat.key
-                  ? "bg-gradient-to-r from-orange-500 via-rose-500 to-pink-600 text-white shadow-lg shadow-orange-500/25"
-                  : "bg-slate-900/90 text-slate-300 hover:text-white border border-white/10 hover:border-white/25"
+                  ? "bg-red-600 text-white shadow-md shadow-red-600/20"
+                  : "bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200 border border-slate-200"
               }`}
             >
               {cat.label}
@@ -109,18 +106,18 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
             return (
               <div
                 key={service.id}
-                className="bg-slate-900/80 backdrop-blur-xl rounded-3xl p-7 border border-slate-800 shadow-xl hover:shadow-2xl hover:border-slate-700 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                className="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-red-300 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
               >
                 {/* Accent Top Border */}
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-sky-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-red-600 opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 <div>
                   <div className="flex items-center justify-between gap-3 mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-slate-800/90 text-sky-400 flex items-center justify-center shadow-inner group-hover:bg-sky-500 group-hover:text-slate-950 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shadow-xs group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
                       <Icon className="w-6 h-6" />
                     </div>
 
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-300 bg-slate-800/80 border border-slate-700 px-3 py-1 rounded-full">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-700 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full">
                       {service.categoryKey === "industrial"
                         ? "Industrial"
                         : service.categoryKey === "stationery"
@@ -131,11 +128,11 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
                     </span>
                   </div>
 
-                  <h3 className="font-extrabold text-xl text-white mb-2.5 leading-snug group-hover:text-sky-400 transition-colors">
+                  <h3 className="font-extrabold text-xl text-slate-900 mb-2.5 leading-snug group-hover:text-red-600 transition-colors">
                     {service.name}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
                     {service.description}
                   </p>
 
@@ -144,9 +141,9 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
                     {service.specs.map((spec, sIdx) => (
                       <span
                         key={sIdx}
-                        className="inline-flex items-center gap-1 text-[11px] font-medium bg-slate-950/80 text-slate-300 border border-slate-800 px-2.5 py-1 rounded-md"
+                        className="inline-flex items-center gap-1 text-[11px] font-medium bg-slate-50 text-slate-700 border border-slate-200 px-2.5 py-1 rounded-md"
                       >
-                        <Check className="w-3 h-3 text-sky-400" />
+                        <Check className="w-3 h-3 text-red-600" />
                         {spec}
                       </span>
                     ))}
@@ -154,10 +151,10 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
                 </div>
 
                 {/* Footer Actions */}
-                <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-2">
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
                   <button
                     onClick={() => onSelectService(service.name)}
-                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-sky-400 hover:text-sky-300 transition"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-red-600 hover:text-red-700 transition"
                   >
                     <span>Request Quote</span>
                     <ArrowRight className="w-4 h-4" />
@@ -169,7 +166,7 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition bg-emerald-950/40 hover:bg-emerald-950/70 border border-emerald-500/30 px-3 py-1.5 rounded-full"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 hover:text-emerald-800 transition bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 px-3 py-1.5 rounded-full"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
                     <span>WhatsApp</span>

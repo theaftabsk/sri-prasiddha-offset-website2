@@ -2,38 +2,29 @@
 
 @layer base {
   :root {
-    --bg-dark: #080b11;
-    --bg-surface: #0f1623;
-    --bg-card: #141d2e;
-    --bg-card-hover: #192439;
+    --bg-main: #ffffff;
+    --bg-surface: #f8fafc;
+    --bg-card: #ffffff;
     
-    /* CMYK Signature Spectrum */
-    --cmyk-cyan: #00d2ff;
-    --cmyk-cyan-glow: rgba(0, 210, 255, 0.35);
-    --cmyk-magenta: #ff007a;
-    --cmyk-magenta-glow: rgba(255, 0, 122, 0.35);
-    --cmyk-yellow: #ffdf00;
-    --cmyk-yellow-glow: rgba(255, 223, 0, 0.35);
-    --cmyk-key: #05070b;
-
-    /* Sri Prasiddha Brand Accents */
-    --brand-orange: #ff6b35;
-    --brand-maroon: #831843;
+    /* Signature Crimson Red */
+    --brand-red: #dc2626;
+    --brand-red-dark: #b91c1c;
+    --brand-red-light: #fef2f2;
+    --brand-red-border: #fecaca;
+    
     --brand-green: #10b981;
-    
-    --border-glass: rgba(255, 255, 255, 0.08);
-    --border-glass-hover: rgba(255, 107, 53, 0.4);
+    --border-light: #e2e8f0;
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
-    background-color: #080b11;
+    background-color: #ffffff;
   }
 
   body {
-    background-color: #080b11;
-    color: #f1f5f9;
+    background-color: #ffffff;
+    color: #0f172a;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     overflow-x: hidden;
   }

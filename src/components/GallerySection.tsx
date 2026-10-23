@@ -51,17 +51,17 @@ export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
 
   return (
-    <section id="gallery" className="py-20 bg-[#0b0f19] text-white border-t border-white/10">
+    <section id="gallery" className="py-20 bg-white text-slate-900 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-bold text-orange-400 uppercase tracking-widest block mb-2">
+          <span className="text-xs font-bold text-red-600 uppercase tracking-widest block mb-2">
             Facility & Finished Work Showcase
           </span>
-          <h2 className="font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4 uppercase">
+          <h2 className="font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-4 uppercase">
             Work Samples & Production Floor
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             Inspect our high-speed offset machinery, industrial caution signage boards, carbonless invoice books, corporate stationery, and finished brand merchandise.
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function GallerySection() {
             <div
               key={item.id}
               onClick={() => setSelectedImage(item)}
-              className="group relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer bg-slate-950 aspect-16/10"
+              className="group relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 hover:border-red-500/50 transition-all duration-300 cursor-pointer bg-slate-950 aspect-16/10"
             >
               <Image
                 src={item.image}
@@ -83,7 +83,7 @@ export default function GallerySection() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-300 bg-cyan-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-cyan-500/30">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-red-100 bg-red-600/90 backdrop-blur-md px-3 py-1 rounded-full border border-red-400/40">
                     {item.category}
                   </span>
                   <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -95,7 +95,7 @@ export default function GallerySection() {
                   {item.title}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-slate-300 line-clamp-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-200 line-clamp-2 leading-relaxed">
                   {item.description}
                 </p>
               </div>

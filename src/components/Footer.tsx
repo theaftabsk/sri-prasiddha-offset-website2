@@ -25,17 +25,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#05070b] text-slate-400 border-t border-white/10 pt-16 pb-12 relative overflow-hidden">
-      {/* 4-Color CMYK Bar on top */}
-      <div className="flex h-1.5 w-full absolute top-0 left-0 right-0">
-        <div className="flex-1 bg-[#00d2ff]" />
-        <div className="flex-1 bg-[#ff007a]" />
-        <div className="flex-1 bg-[#ffdf00]" />
-        <div className="flex-1 bg-[#ff6b35]" />
-      </div>
+    <footer className="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-12 relative overflow-hidden">
+      {/* Crimson Red Bar on top */}
+      <div className="h-1.5 w-full absolute top-0 left-0 right-0 bg-red-600" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
           {/* Brand info */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3 mb-4">
@@ -49,7 +44,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-extrabold text-xl text-white tracking-tight block">
-                  SRI PRASIDDHA <span className="text-orange-400">OFFSET</span>
+                  SRI PRASIDDHA <span className="text-red-500">OFFSET</span>
                 </span>
                 <span className="text-[10px] font-bold tracking-wider text-slate-400 uppercase">
                   A Complete Printing Solutions
@@ -63,15 +58,15 @@ export default function Footer() {
 
             <div className="space-y-2 text-xs text-slate-300">
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-cyan-400" />
+                <Phone className="w-3.5 h-3.5 text-red-500" />
                 <span>Primary: <strong className="text-white">+91 {COMPANY_INFO.primaryPhone}</strong></span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-orange-400" />
+                <Phone className="w-3.5 h-3.5 text-red-500" />
                 <span>Second Choice: <strong className="text-white">+91 {COMPANY_INFO.altPhone}</strong></span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-pink-400" />
+                <Mail className="w-3.5 h-3.5 text-red-500" />
                 <span className="text-slate-300">{COMPANY_INFO.email}</span>
               </div>
             </div>
@@ -84,37 +79,37 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <Link href="/services" className="hover:text-cyan-400 transition">
+                <Link href="/services" className="hover:text-red-400 transition">
                   Industrial Registers & Log Books
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-cyan-400 transition">
+                <Link href="/services" className="hover:text-red-400 transition">
                   Safety Precaution & Caution Boards
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-cyan-400 transition">
+                <Link href="/services" className="hover:text-red-400 transition">
                   Bill Books & Duplicate NCR Invoices
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-cyan-400 transition">
+                <Link href="/services" className="hover:text-red-400 transition">
                   Letterheads & Business Cards
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-cyan-400 transition">
+                <Link href="/services" className="hover:text-red-400 transition">
                   Roll-Up Standees & Banners
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-cyan-400 transition">
+                <Link href="/services" className="hover:text-red-400 transition">
                   Roll-Form Labels & Vinyl Stickers
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-cyan-400 transition">
+                <Link href="/services" className="hover:text-red-400 transition">
                   Branded T-Shirts & Custom Apparel
                 </Link>
               </li>
@@ -128,32 +123,32 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <Link href="/clients" className="hover:text-pink-400 transition">
+                <Link href="/clients" className="hover:text-red-400 transition">
                   Pharma Formulations
                 </Link>
               </li>
               <li>
-                <Link href="/clients" className="hover:text-pink-400 transition">
+                <Link href="/clients" className="hover:text-red-400 transition">
                   Steel & Manufacturing
                 </Link>
               </li>
               <li>
-                <Link href="/clients" className="hover:text-pink-400 transition">
+                <Link href="/clients" className="hover:text-red-400 transition">
                   Dairy & Food FMCG
                 </Link>
               </li>
               <li>
-                <Link href="/clients" className="hover:text-pink-400 transition">
+                <Link href="/clients" className="hover:text-red-400 transition">
                   Schools & Education
                 </Link>
               </li>
               <li>
-                <Link href="/clients" className="hover:text-pink-400 transition">
+                <Link href="/clients" className="hover:text-red-400 transition">
                   Civil Infrastructure
                 </Link>
               </li>
               <li>
-                <Link href="/clients" className="hover:text-pink-400 transition">
+                <Link href="/clients" className="hover:text-red-400 transition">
                   Hospitality & Healthcare
                 </Link>
               </li>
@@ -173,18 +168,18 @@ export default function Footer() {
               href={COMPANY_INFO.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-400 hover:text-orange-300 transition"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-red-500 hover:text-red-400 transition"
             >
               <MapPin className="w-3.5 h-3.5" />
               <span>Get Directions on Google Maps →</span>
             </a>
 
-            <div className="mt-6 pt-4 border-t border-white/10">
+            <div className="mt-6 pt-4 border-t border-slate-800">
               <button
                 onClick={handleOpenAdmin}
                 className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-300 transition"
               >
-                <Database className="w-3.5 h-3.5 text-cyan-400" />
+                <Database className="w-3.5 h-3.5 text-red-500" />
                 <span>View Stored Quotation Enquiries</span>
               </button>
             </div>
@@ -202,7 +197,7 @@ export default function Footer() {
             <span>•</span>
             <button
               onClick={scrollToTop}
-              className="hover:text-orange-400 inline-flex items-center gap-1 transition"
+              className="hover:text-red-400 inline-flex items-center gap-1 transition"
             >
               <span>Back to Top</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
