@@ -31,7 +31,7 @@ export default function StickyActions() {
         {/* Call Button */}
         <a
           href={`tel:${COMPANY_INFO.primaryPhone}`}
-          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center shadow-md shadow-red-500/30 transition-all duration-200 transform hover:scale-105 active:scale-95"
+          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-500 hover:bg-orange-600 text-white flex items-center justify-center shadow-md shadow-orange-500/30 transition-all duration-200 transform hover:scale-105 active:scale-95"
           title={`Call ${COMPANY_INFO.primaryPhone}`}
           aria-label={`Call office directly at ${COMPANY_INFO.primaryPhone}`}
         >
@@ -49,8 +49,8 @@ export default function StickyActions() {
           title="Chat on WhatsApp"
           aria-label="Chat with Hari Kumar on WhatsApp"
         >
-          <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white animate-ping" />
-          <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white" />
+          <span className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full border-2 border-white animate-ping" />
+          <span className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full border-2 border-white" />
           <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 fill-white" />
         </a>
       </div>

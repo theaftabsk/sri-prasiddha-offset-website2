@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#dc2626",
+  themeColor: "#f97316",
   width: "device-width",
   initialScale: 1,
 };
@@ -139,7 +139,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
         />
       </head>
-      <body className="font-sans antialiased text-slate-900 bg-white min-h-screen flex flex-col selection:bg-red-600 selection:text-white">
+      <body className="font-sans antialiased text-slate-900 bg-white min-h-screen flex flex-col selection:bg-orange-500 selection:text-white">
         {children}
       </body>
     </html>

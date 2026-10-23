@@ -58,7 +58,7 @@ _Sent from Direct Printing Desk on Website_`;
               COMPLETE COMMERCIAL{" "}
               <span className="relative inline-block text-cyan-600">
                 PRINTING
-                <span className="absolute left-0 -bottom-1 w-full h-1 bg-red-600 rounded-full" />
+                <span className="absolute left-0 -bottom-1 w-full h-1 bg-orange-500 rounded-full" />
               </span>{" "}
               & INDUSTRIAL BRANDING
             </h1>
@@ -109,7 +109,7 @@ _Sent from Direct Printing Desk on Website_`;
           <div className="lg:col-span-5 w-full">
             <div className="relative mx-auto max-w-md w-full bg-white rounded-3xl p-6 sm:p-7 shadow-xl sm:shadow-2xl border border-slate-200/90 transition-all duration-300 hover:shadow-cyan-500/10">
               {/* Top Accent Stripe */}
-              <div className="absolute top-0 left-6 right-6 sm:left-8 sm:right-8 h-1 bg-gradient-to-r from-red-500 via-orange-500 to-amber-500 rounded-b-md" />
+              <div className="absolute top-0 left-6 right-6 sm:left-8 sm:right-8 h-1 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-b-md" />
 
               {/* Card Sub-Header */}
               <div className="flex items-center justify-between mb-1.5">

@@ -20,19 +20,19 @@ export default function ServicesPage() {
       <Navbar />
 
       <main className="flex-1">
-        {/* Page Hero Header - Clean White & Red Style */}
-        <section className="relative pt-14 pb-16 bg-gradient-to-b from-red-50/30 to-white text-center overflow-hidden border-b border-slate-200">
+        {/* Page Hero Header - Clean White & Light Orange Style */}
+        <section className="relative pt-14 pb-16 bg-gradient-to-b from-orange-50/40 to-white text-center overflow-hidden border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="inline-flex items-center gap-2 bg-white border border-red-200 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-white border border-orange-200 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
               <span className="text-slate-700">17 COMPLETE PRINTING DISCIPLINES</span>
               <span className="text-slate-300">•</span>
-              <span className="text-red-600 font-bold">IN-HOUSE PRECISION QUALITY</span>
+              <span className="text-orange-600 font-bold">IN-HOUSE PRECISION QUALITY</span>
             </div>
 
             <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.12] uppercase mb-6">
               PRINTING & INDUSTRIAL{" "}
-              <span className="text-red-600">SIGNAGE SERVICES</span>
+              <span className="text-orange-500">SIGNAGE SERVICES</span>
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-8 font-normal">
@@ -54,7 +54,7 @@ export default function ServicesPage() {
 
               <Link
                 href="/contact#quote"
-                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm px-7 py-3.5 rounded-full shadow-md transition transform hover:-translate-y-0.5 tracking-wide uppercase"
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm px-7 py-3.5 rounded-full shadow-md transition transform hover:-translate-y-0.5 tracking-wide uppercase"
               >
                 <span>REQUEST PRINT QUOTE</span>
                 <ArrowUpRight className="w-4 h-4 text-white" />

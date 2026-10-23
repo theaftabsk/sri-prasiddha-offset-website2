@@ -38,7 +38,7 @@ export default function HomePage() {
           <div className="pb-16 text-center">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2.5 bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs uppercase tracking-widest px-8 py-4 rounded-full shadow-lg shadow-red-600/20 transition transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2.5 bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-xs uppercase tracking-widest px-8 py-4 rounded-full shadow-lg shadow-orange-500/20 transition transform hover:-translate-y-0.5"
             >
               <span>VIEW FULL SERVICE CATALOGUE (17 SERVICES)</span>
               <ArrowUpRight className="w-4 h-4 text-white" />
@@ -52,10 +52,10 @@ export default function HomePage() {
           <div className="pb-16 text-center">
             <Link
               href="/clients"
-              className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 border border-slate-300 hover:border-red-400 text-slate-800 hover:text-red-600 font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-full shadow-sm transition transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 border border-slate-300 hover:border-orange-400 text-slate-800 hover:text-orange-600 font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-full shadow-sm transition transform hover:-translate-y-0.5"
             >
               <span>VIEW ALL 26 VERIFIED CORPORATE CLIENTS</span>
-              <ArrowUpRight className="w-4 h-4 text-red-600" />
+              <ArrowUpRight className="w-4 h-4 text-orange-500" />
             </Link>
           </div>
         </div>

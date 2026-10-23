@@ -70,7 +70,7 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold text-red-600 uppercase tracking-widest block mb-2 bg-red-50 border border-red-200/80 px-3.5 py-1 rounded-full w-fit mx-auto">
+          <span className="text-xs font-bold text-orange-600 uppercase tracking-widest block mb-2 bg-orange-50 border border-orange-200/80 px-3.5 py-1 rounded-full w-fit mx-auto">
             Complete Print Solutions Catalogue
           </span>
           <h2 className="font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-4 uppercase">
@@ -89,7 +89,7 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
               onClick={() => setSelectedCategory(cat.key)}
               className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 ${
                 selectedCategory === cat.key
-                  ? "bg-red-600 text-white shadow-md shadow-red-600/20"
+                  ? "bg-orange-500 text-white shadow-md shadow-orange-500/20"
                   : "bg-slate-100 text-slate-700 hover:text-slate-900 hover:bg-slate-200 border border-slate-200"
               }`}
             >
@@ -106,14 +106,14 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
             return (
               <div
                 key={service.id}
-                className="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-red-300 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                className="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-orange-300 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
               >
                 {/* Accent Top Border */}
-                <div className="absolute top-0 left-0 right-0 h-[3px] bg-red-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 <div>
                   <div className="flex items-center justify-between gap-3 mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center shadow-xs group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center shadow-xs group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
                       <Icon className="w-6 h-6" />
                     </div>
 
@@ -128,7 +128,7 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
                     </span>
                   </div>
 
-                  <h3 className="font-extrabold text-xl text-slate-900 mb-2.5 leading-snug group-hover:text-red-600 transition-colors">
+                  <h3 className="font-extrabold text-xl text-slate-900 mb-2.5 leading-snug group-hover:text-orange-500 transition-colors">
                     {service.name}
                   </h3>
 
@@ -143,7 +143,7 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
                         key={sIdx}
                         className="inline-flex items-center gap-1 text-[11px] font-medium bg-slate-50 text-slate-700 border border-slate-200 px-2.5 py-1 rounded-md"
                       >
-                        <Check className="w-3 h-3 text-red-600" />
+                        <Check className="w-3 h-3 text-orange-500" />
                         {spec}
                       </span>
                     ))}
@@ -154,7 +154,7 @@ export default function ServicesExplorer({ onSelectService }: ServicesExplorerPr
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
                   <button
                     onClick={() => onSelectService(service.name)}
-                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-red-600 hover:text-red-700 transition"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-orange-600 hover:text-orange-700 transition"
                   >
                     <span>Request Quote</span>
                     <ArrowRight className="w-4 h-4" />

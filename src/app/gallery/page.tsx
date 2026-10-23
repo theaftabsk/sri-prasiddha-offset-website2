@@ -16,19 +16,19 @@ export default function GalleryPage() {
       <Navbar />
 
       <main className="flex-1">
-        {/* Gallery Hero Header - Clean White & Red Style */}
-        <section className="relative pt-14 pb-16 bg-gradient-to-b from-red-50/30 to-white text-center overflow-hidden border-b border-slate-200">
+        {/* Gallery Hero Header - Clean White & Orange Style */}
+        <section className="relative pt-14 pb-16 bg-gradient-to-b from-orange-50/30 to-white text-center overflow-hidden border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="inline-flex items-center gap-2 bg-white border border-red-200 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-white border border-orange-200 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
               <span className="text-slate-700">LIVE SAMPLES & FACILITY PHOTOGRAPHY</span>
               <span className="text-slate-300">•</span>
-              <span className="text-red-600 font-bold">100% IN-HOUSE PRESS</span>
+              <span className="text-orange-600 font-bold">100% IN-HOUSE PRESS</span>
             </div>
 
             <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.12] uppercase mb-6">
               PRINT WORK &{" "}
-              <span className="text-red-600">SAMPLE SHOWCASE</span>
+              <span className="text-orange-600">SAMPLE SHOWCASE</span>
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-8 font-normal">
@@ -50,7 +50,7 @@ export default function GalleryPage() {
 
               <Link
                 href="/contact#quote"
-                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm px-7 py-3.5 rounded-full shadow-md transition transform hover:-translate-y-0.5 tracking-wide uppercase"
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm px-7 py-3.5 rounded-full shadow-md transition transform hover:-translate-y-0.5 tracking-wide uppercase"
               >
                 <span>REQUEST SAMPLE QUOTE</span>
                 <ArrowUpRight className="w-4 h-4 text-white" />

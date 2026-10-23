@@ -12,7 +12,7 @@ export default function MapSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <span className="text-xs font-bold text-red-600 uppercase tracking-widest block mb-1">
+            <span className="text-xs font-bold text-orange-600 uppercase tracking-widest block mb-1">
               Find Our Printing Press
             </span>
             <h2 className="font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight uppercase">
@@ -24,7 +24,7 @@ export default function MapSection() {
             href={COMPANY_INFO.googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white bg-red-600 hover:bg-red-700 px-5 py-2.5 rounded-full transition w-fit shadow-md hover:shadow-lg"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-5 py-2.5 rounded-full transition w-fit shadow-md hover:shadow-lg"
           >
             <Navigation className="w-4 h-4 text-white" />
             <span>Open Directions in Google Maps</span>
@@ -48,7 +48,7 @@ export default function MapSection() {
 
           {/* Floating Details Card */}
           <div className="md:absolute bottom-6 left-6 max-w-sm w-full bg-white/95 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-slate-200 m-4 md:m-0 text-slate-900">
-            <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-wider text-red-600 mb-2">
+            <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-wider text-orange-600 mb-2">
               <MapPin className="w-3.5 h-3.5" />
               <span>Chintal Facility</span>
             </div>
@@ -63,11 +63,11 @@ export default function MapSection() {
 
             <div className="pt-3 border-t border-slate-200 space-y-2 text-xs text-slate-700">
               <div className="flex items-center gap-2">
-                <Clock className="w-3.5 h-3.5 text-red-600" />
+                <Clock className="w-3.5 h-3.5 text-orange-500" />
                 <span>Working: <strong>Mon - Sat (9 AM - 9 PM)</strong></span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-red-600" />
+                <Phone className="w-3.5 h-3.5 text-orange-500" />
                 <span>Direct: <strong>+91 {COMPANY_INFO.primaryPhone}</strong></span>
               </div>
             </div>
