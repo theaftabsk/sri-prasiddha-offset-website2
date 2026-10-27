@@ -109,6 +109,34 @@ _Sent from Direct Printing Desk on Website_`;
                 <span className="text-[11px] text-slate-500 font-semibold mt-1 block">Doorstep Dispatch</span>
               </div>
             </div>
+
+            {/* Live Work Samples Teaser Bar */}
+            <Link
+              href="/gallery"
+              className="mt-6 inline-flex items-center gap-3 p-2 pr-4 bg-orange-50/70 hover:bg-orange-100/80 border border-orange-200/80 rounded-2xl transition-all duration-200 group"
+            >
+              <div className="flex -space-x-2 overflow-hidden">
+                <div className="inline-block h-8 w-8 rounded-full ring-2 ring-white overflow-hidden relative">
+                  <Image src="/assets/images/brochures_and_menus.jpg" alt="Menu sample" fill className="object-cover" />
+                </div>
+                <div className="inline-block h-8 w-8 rounded-full ring-2 ring-white overflow-hidden relative">
+                  <Image src="/assets/images/school_diaries_calendars.png" alt="Diary sample" fill className="object-cover" />
+                </div>
+                <div className="inline-block h-8 w-8 rounded-full ring-2 ring-white overflow-hidden relative">
+                  <Image src="/assets/images/custom_tshirts_caps.png" alt="Tshirt sample" fill className="object-cover" />
+                </div>
+                <div className="inline-block h-8 w-8 rounded-full ring-2 ring-white overflow-hidden relative">
+                  <Image src="/assets/images/stamps_and_seals.jpg" alt="Stamp sample" fill className="object-cover" />
+                </div>
+              </div>
+              <div className="text-left">
+                <span className="text-xs font-bold text-slate-900 group-hover:text-orange-600 transition flex items-center gap-1">
+                  View 8+ Live Real Work Samples
+                  <ArrowUpRight className="w-3.5 h-3.5 text-orange-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </span>
+                <span className="text-[11px] text-slate-500">Pallavi School Diaries, Menus, Apparel, Calendars & Stamps</span>
+              </div>
+            </Link>
           </div>
 
           {/* Right Column: Clean White & Orange Quick-Quote Form Card */}

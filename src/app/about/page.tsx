@@ -122,6 +122,48 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* Real In-House Work & Display Showcase */}
+            <div className="mb-16">
+              <div className="text-center max-w-2xl mx-auto mb-8">
+                <span className="text-xs font-bold uppercase tracking-widest text-orange-600 block mb-1">
+                  100% Verified In-House Production
+                </span>
+                <h3 className="font-extrabold text-2xl sm:text-3xl text-slate-900 uppercase">
+                  Real Shop Floor & Product Display Rack
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 mt-2">
+                  Actual photographs taken at our Chintal shop — showcasing daily work orders for educational institutions, corporate apparel, rubber stamps, and food menus.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/5 group">
+                  <Image src="/assets/images/sample_rack_overview.jpg" alt="Print Sample Rack" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+                    <span className="text-white text-xs font-bold">Print Samples Rack</span>
+                  </div>
+                </div>
+                <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/5 group">
+                  <Image src="/assets/images/custom_tshirts_caps.png" alt="Corporate T-Shirts & Caps" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+                    <span className="text-white text-xs font-bold">Polo T-Shirts & Caps</span>
+                  </div>
+                </div>
+                <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/5 group">
+                  <Image src="/assets/images/school_diaries_calendars.png" alt="School Diaries & Calendars" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+                    <span className="text-white text-xs font-bold">Pallavi School Diaries</span>
+                  </div>
+                </div>
+                <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-4/5 group">
+                  <Image src="/assets/images/stamps_and_seals.jpg" alt="Rubber Stamps Shelf" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+                    <span className="text-white text-xs font-bold">Pre-Inked Flash Stamps</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Leadership Profile */}
             <div className="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-md flex flex-col md:flex-row items-center gap-8">
               <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-md bg-gradient-to-tr from-orange-500 to-amber-500 flex-shrink-0 flex items-center justify-center font-extrabold text-4xl text-white">
